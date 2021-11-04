@@ -24,6 +24,7 @@ const UserSchema = {
     type: DataTypes.DATE,
     field: 'create_at', //con este formato en la tabla
     defaultValue: Sequelize.NOW //momento en que se inserto
+    //todo este campo es automatico
   }
 }
 
