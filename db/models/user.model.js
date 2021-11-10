@@ -36,9 +36,14 @@ const UserSchema = {
 class User extends Model {
   //métodos estáticos:
   //yo no necesito una declaracion para acceder a los métodos
-  static associate() {
-    // associate
+  static associate(models) {
+    this.hasOne(models.Customer, {
+      as: 'customer',
+      foreignKey: 'userId'  //como la va a encontrar
+    }); 
   }
+  //cuando hacemos un hasOne, recordemos que la relacion esta
+  //del lado del customer
   static config(sequelize) {
     return {
       sequelize,   

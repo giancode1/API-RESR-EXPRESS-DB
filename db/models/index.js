@@ -10,6 +10,7 @@ function setupModels(sequelize) { //configuracion de los modelos
   //mas modelos
 
   //ejecutar el metodo:
+  User.associate(sequelize.models);
   Customer.associate(sequelize.models);
 }
 
