@@ -6,7 +6,7 @@ const PRODUCT_TABLE = 'products';
 
 const ProductSchema = {
   id: {
-    allowNull: false,
+    allowNull: false, //no permito que sea null
     autoIncrement: true,
     primaryKey: true,
     type: DataTypes.INTEGER
@@ -14,6 +14,7 @@ const ProductSchema = {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
+    //unique:true   //para que haya nombres unicos
   },
   image: {
     type: DataTypes.STRING,
@@ -21,7 +22,7 @@ const ProductSchema = {
   },
   description: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: false, 
   },
   price: {
     type: DataTypes.INTEGER,
@@ -33,7 +34,7 @@ const ProductSchema = {
     field: 'created_at',
     defaultValue: Sequelize.NOW,
   },
-  categoryId: {
+  categoryId: { 
     field: 'category_id',
     allowNull: false,
     type: DataTypes.INTEGER,
